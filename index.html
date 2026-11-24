@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tony Zhao | Analyst</title>
+<style>
+  :root { --ink:#1b1f24; --muted:#5b6470; --accent:#1f6feb; --bg:#f7f8fa; --card:#fff; --line:#e3e6ea; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; font-size:17px; }
+  .wrap { max-width:860px; margin:0 auto; padding:0 20px; }
+  /* Version switcher: for Tony's A/B review only; delete before going public */
+  .ab { background:#fff3cd; border-bottom:1px solid #f0d98c; font-size:14px; padding:8px 0; text-align:center; }
+  .ab button { margin:0 4px; padding:4px 12px; border:1px solid #c9a227; background:#fff; border-radius:6px; cursor:pointer; font-size:14px; }
+  .ab button.on { background:#c9a227; color:#fff; }
+  header { background:var(--card); border-bottom:1px solid var(--line); padding:56px 0 40px; }
+  h1 { font-size:2.4rem; margin:0; line-height:1.15; }
+  .title { font-size:1.3rem; color:var(--accent); font-weight:600; margin:6px 0 14px; }
+  .summary { color:var(--muted); max-width:620px; margin:0 0 24px; }
+  .cta { display:flex; flex-wrap:wrap; gap:12px; }
+  .btn { display:inline-block; padding:12px 22px; border-radius:8px; text-decoration:none; font-weight:600; }
+  .btn.primary { background:var(--accent); color:#fff; }
+  .btn.secondary { border:2px solid var(--accent); color:var(--accent); }
+  section { padding:40px 0 8px; }
+  h2 { font-size:1.35rem; margin:0 0 16px; padding-bottom:6px; border-bottom:2px solid var(--line); }
+  .skills { display:flex; flex-wrap:wrap; gap:8px; padding:0; list-style:none; margin:0; }
+  .skills li { background:var(--card); border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:15px; }
+  .job { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:18px 20px; margin-bottom:14px; }
+  .job h3 { margin:0; font-size:1.05rem; }
+  .job .meta { color:var(--muted); font-size:14px; margin-bottom:6px; }
+  .job p { margin:0; }
+  .empty { background:var(--card); border:2px dashed var(--line); border-radius:10px; padding:28px; text-align:center; color:var(--muted); }
+  footer { margin-top:48px; background:var(--ink); color:#fff; padding:44px 0; text-align:center; }
+  footer h2 { border:none; color:#fff; margin-bottom:8px; }
+  footer p { color:#c9d1d9; margin:0 0 20px; }
+  footer .btn.secondary { border-color:#fff; color:#fff; }
+  @media (max-width:600px) {
+    header { padding:36px 0 28px; }
+    h1 { font-size:1.9rem; }
+    .title { font-size:1.1rem; }
+    .btn { flex:1 1 100%; text-align:center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="ab">Preview: <button id="btnA" class="on">Version A: with AI</button><button id="btnB">Version B: without AI</button></div>
+
+<header>
+  <div class="wrap">
+    <h1>Tony Zhao</h1>
+    <div class="title" id="headline">Analyst | AI-Driven Solutions</div>
+    <p class="summary" id="summary">Analyst with 6+ years across data and business analysis: validating complex data, finding the patterns that protect revenue, and automating the manual work in between. Now applying AI to deliver faster, smarter solutions.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:YOUR-EMAIL@example.com">Contact me</a>
+      <a class="btn secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="about">
+    <h2>About</h2>
+    <p>I turn messy, high-volume data into clear answers that people can act on. I've validated contract and claims data, built reports that inform business decisions, improved SQL-based workflows, and automated testing and data pipelines that cut hours of manual work every week. I hold an M.S. in Computer Information Systems (Data Analytics) from Boston University.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li>SQL (Oracle, SQL Server)</li><li>Excel</li><li>Cognos Analytics</li><li>Data validation &amp; mining</li>
+      <li>ETL (SSIS)</li><li>Reporting &amp; dashboards</li><li>Test automation</li><li>UAT &amp; test planning</li>
+      <li>Process improvement</li><li>Contract &amp; revenue analytics</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="job">
+      <h3>Business Analyst, Contract Validation &amp; Analytics</h3>
+      <div class="meta">Johnson &amp; Johnson Healthcare Systems · 2021 – 2026 (consultant via Insight Global, 2020 – 2021)</div>
+      <p>Validated and analyzed large volumes of contract and claims data, produced reporting that informed business decisions, and improved SQL workflows to speed up delivery.</p>
+    </div>
+    <div class="job">
+      <h3>Technical Business Analyst / QA Developer</h3>
+      <div class="meta">Avanade · 2016 – 2018</div>
+      <p>Built automated test scripts that cut UAT defects by over 93%, and rebuilt an ETL process to automate test data, saving 20+ hours per week.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>AI Projects</h2>
+    <div class="empty">Coming soon: AI-driven projects I'm building now.</div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Want to know more?</h2>
+    <p>I'm open to full-time and contract roles. Let's talk.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn primary" href="mailto:YOUR-EMAIL@example.com">Email me</a>
+      <a class="btn secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const V = {
+    A: { headline: "Analyst | AI-Driven Solutions",
+         summary: "Analyst with 6+ years across data and business analysis: validating complex data, finding the patterns that protect revenue, and automating the manual work in between. Now applying AI to deliver faster, smarter solutions." },
+    B: { headline: "Analyst",
+         summary: "Analyst with 6+ years across data and business analysis: validating complex data, finding the patterns that protect revenue, and automating the manual work in between." }
+  };
+  function show(v) {
+    document.getElementById("headline").textContent = V[v].headline;
+    document.getElementById("summary").textContent = V[v].summary;
+    document.getElementById("btnA").classList.toggle("on", v === "A");
+    document.getElementById("btnB").classList.toggle("on", v === "B");
+  }
+  document.getElementById("btnA").onclick = () => show("A");
+  document.getElementById("btnB").onclick = () => show("B");
+</script>
+</body>
+</html>
