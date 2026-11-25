@@ -9,10 +9,6 @@
   * { box-sizing:border-box; }
   body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; font-size:17px; }
   .wrap { max-width:860px; margin:0 auto; padding:0 20px; }
-  /* Version switcher: for Tony's A/B review only; delete before going public */
-  .ab { background:#fff3cd; border-bottom:1px solid #f0d98c; font-size:14px; padding:8px 0; text-align:center; }
-  .ab button { margin:0 4px; padding:4px 12px; border:1px solid #c9a227; background:#fff; border-radius:6px; cursor:pointer; font-size:14px; }
-  .ab button.on { background:#c9a227; color:#fff; }
   header { background:var(--card); border-bottom:1px solid var(--line); padding:56px 0 40px; }
   h1 { font-size:2.4rem; margin:0; line-height:1.15; }
   .title { font-size:1.3rem; color:var(--accent); font-weight:600; margin:6px 0 14px; }
@@ -44,16 +40,14 @@
 </head>
 <body>
 
-<div class="ab">Preview: <button id="btnA" class="on">Version A: with AI</button><button id="btnB">Version B: without AI</button></div>
-
 <header>
   <div class="wrap">
     <h1>Tony Zhao</h1>
-    <div class="title" id="headline">Analyst | AI-Driven Solutions</div>
-    <p class="summary" id="summary">Analyst with 6+ years across data and business analysis: validating complex data, finding the patterns that protect revenue, and automating the manual work in between. Now applying AI to deliver faster, smarter solutions.</p>
+    <div class="title">Analyst</div>
+    <p class="summary">Analyst with 6+ years across data and business analysis: validating complex data, finding the patterns that protect revenue, and automating the manual work in between.</p>
     <div class="cta">
-      <a class="btn primary" href="mailto:YOUR-EMAIL@example.com">Contact me</a>
-      <a class="btn secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn primary" href="about:blank" target="_blank" rel="noopener">Contact me</a>
+      <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </header>
@@ -98,27 +92,11 @@
     <h2>Want to know more?</h2>
     <p>I'm open to full-time and contract roles. Let's talk.</p>
     <div class="cta" style="justify-content:center">
-      <a class="btn primary" href="mailto:YOUR-EMAIL@example.com">Email me</a>
-      <a class="btn secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a class="btn primary" href="about:blank" target="_blank" rel="noopener">Email me</a>
+      <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">Connect on LinkedIn</a>
     </div>
   </div>
 </footer>
 
-<script>
-  const V = {
-    A: { headline: "Analyst | AI-Driven Solutions",
-         summary: "Analyst with 6+ years across data and business analysis: validating complex data, finding the patterns that protect revenue, and automating the manual work in between. Now applying AI to deliver faster, smarter solutions." },
-    B: { headline: "Analyst",
-         summary: "Analyst with 6+ years across data and business analysis: validating complex data, finding the patterns that protect revenue, and automating the manual work in between." }
-  };
-  function show(v) {
-    document.getElementById("headline").textContent = V[v].headline;
-    document.getElementById("summary").textContent = V[v].summary;
-    document.getElementById("btnA").classList.toggle("on", v === "A");
-    document.getElementById("btnB").classList.toggle("on", v === "B");
-  }
-  document.getElementById("btnA").onclick = () => show("A");
-  document.getElementById("btnB").onclick = () => show("B");
-</script>
 </body>
 </html>
