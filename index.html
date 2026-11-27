@@ -36,9 +36,35 @@
     .title { font-size:1.1rem; }
     .btn { flex:1 1 100%; text-align:center; }
   }
+
+  .topbar { position:sticky; top:0; z-index:10; background:var(--card); border-bottom:1px solid var(--line); }
+  .topbar .wrap { display:flex; align-items:center; justify-content:space-between; height:56px; }
+  .brand { font-weight:700; color:var(--ink); text-decoration:none; }
+  .menu-btn { width:44px; height:44px; border:1px solid var(--line); border-radius:8px; background:var(--card); cursor:pointer; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; padding:0; }
+  .menu-btn span { display:block; width:22px; height:2px; background:var(--ink); border-radius:2px; transition:transform .2s, opacity .2s; }
+  .menu-btn[aria-expanded="true"] span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+  .menu-btn[aria-expanded="true"] span:nth-child(2) { opacity:0; }
+  .menu-btn[aria-expanded="true"] span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+  .menu { display:none; position:absolute; right:20px; top:60px; background:var(--card); border:1px solid var(--line); border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.08); min-width:180px; padding:6px; }
+  .menu.open { display:block; }
+  .menu a { display:block; padding:10px 14px; border-radius:6px; color:var(--ink); text-decoration:none; font-weight:500; }
+  .menu a:hover, .menu a[aria-current="page"] { background:var(--bg); color:var(--accent); }
+  .topbar .wrap { position:relative; }
 </style>
 </head>
 <body>
+
+<nav class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Tony Zhao</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <div class="menu" id="menu">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About me</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
 
 <header>
   <div class="wrap">
@@ -46,8 +72,8 @@
     <div class="title">Analyst</div>
     <p class="summary">Analyst with 6+ years across data and business analysis: validating complex data, finding the patterns that protect revenue, and automating the manual work in between.</p>
     <div class="cta">
-      <a class="btn primary" href="about:blank" target="_blank" rel="noopener">Contact me</a>
-      <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn primary" href="contact.html">Contact me</a>
+      <a class="btn secondary" href="https://www.linkedin.com/in/zhao-tony" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </header>
@@ -56,6 +82,7 @@
   <section id="about">
     <h2>About</h2>
     <p>I turn messy, high-volume data into clear answers that people can act on. I've validated contract and claims data, built reports that inform business decisions, improved SQL-based workflows, and automated testing and data pipelines that cut hours of manual work every week. I hold an M.S. in Computer Information Systems (Data Analytics) from Boston University.</p>
+    <p><a href="about.html" style="color:var(--accent);font-weight:600">More about me &rarr;</a></p>
   </section>
 
   <section id="skills">
@@ -92,11 +119,16 @@
     <h2>Want to know more?</h2>
     <p>I'm open to full-time and contract roles. Let's talk.</p>
     <div class="cta" style="justify-content:center">
-      <a class="btn primary" href="about:blank" target="_blank" rel="noopener">Email me</a>
-      <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a class="btn primary" href="contact.html">Contact me</a>
+      <a class="btn secondary" href="https://www.linkedin.com/in/zhao-tony" target="_blank" rel="noopener">Connect on LinkedIn</a>
     </div>
   </div>
 </footer>
 
+<script>
+  var b=document.getElementById('menuBtn'), m=document.getElementById('menu');
+  b.addEventListener('click',function(e){ e.stopPropagation(); var o=m.classList.toggle('open'); b.setAttribute('aria-expanded',o); });
+  document.addEventListener('click',function(e){ if(!m.contains(e.target)){ m.classList.remove('open'); b.setAttribute('aria-expanded','false'); } });
+</script>
 </body>
 </html>
